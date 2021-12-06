@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:nft_app/model/profile.dart';
+import 'package:nft_app/screens/profile/widgets/custom_grid.dart';
+import 'package:nft_app/screens/profile/widgets/tab_sliver_delegate.dart';
+
+import 'widgets/personal_Info.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final profile = Profile.generateProfile();
+
+  final tabs = ["Creations","Collections"];
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +20,29 @@ class ProfilePage extends StatelessWidget {
           length: 2,
           child: NestedScrollView(
               headerSliverBuilder: (context, bool innerBoxIsScrolled) {
-                return <Widget>[];
+                return <Widget>[
+                  SliverToBoxAdapter(
+                    child: PersonalInfo(profile: profile),
+                  ),
+                  SliverPersistentHeader(
+                      delegate: TabSliverDelegate(TabBar(
+                    labelColor: Colors.black,
+                    unselectedLabelColor: Colors.grey[400],
+                    indicatorColor: Colors.black,
+                    tabs: tabs.map((e) => Tab(
+                      child: Text(e,style: TextStyle(
+                        fontSize: 18,
+                      ),),
+                    )).toList(),
+                  )),pinned: true,)
+                ];
               },
               body: TabBarView(
-                children: [],
+                children: [
+                  CustomGrid(list: profile.creations!, scrollKey: "creations",),
+                  CustomGrid(list: profile.collections!, scrollKey: "collections",),
+                  
+                ],
               ))),
     );
   }
