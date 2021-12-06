@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:nft_app/model/art.dart';
+import 'package:nft_app/screens/detail/detail.dart';
 
 class CustomGrid extends StatelessWidget {
   final List<Art> list;
@@ -22,16 +23,23 @@ class CustomGrid extends StatelessWidget {
             crossAxisSpacing: 10,
             childAspectRatio: 4 / 5,
           ),
-          itemBuilder: (context, index) => Container(
-                height: 400,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.asset(
-                    list[index].imgUrl!,
-                    fit: BoxFit.cover,
+          itemBuilder: (context, index) => GestureDetector(
+                onTap: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => DetailPage(art: list[index],))),
+                child: Container(
+                  height: 400,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Hero(
+                    tag:list[index].imgUrl!,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        list[index].imgUrl!,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               )),

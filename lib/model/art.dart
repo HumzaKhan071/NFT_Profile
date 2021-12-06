@@ -1,12 +1,13 @@
+import 'package:nft_app/model/bidder.dart';
+
 class Art {
   String? imgUrl;
   String? name;
   String? desc;
   num? price;
+  List<Bidder>? bids;
 
-  Art({
+  List<Bidder>? history;
 
-    this.imgUrl,
-    this.name,this.price,this.desc
-  });
+  Art({this.imgUrl, this.name, this.price, this.desc, this.bids, this.history});
 }

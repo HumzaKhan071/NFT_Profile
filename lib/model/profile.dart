@@ -1,3 +1,5 @@
+import 'package:nft_app/model/bidder.dart';
+
 import 'art.dart';
 
 class Profile {
@@ -31,31 +33,31 @@ class Profile {
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/collection2.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/collection3.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/collection4.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
                    Art(
               imgUrl: "assets/images/collection5.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
                   
         ],
          creations: [
@@ -64,31 +66,31 @@ class Profile {
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/create2.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/create3.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
           Art(
               imgUrl: "assets/images/create4.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
                    Art(
               imgUrl: "assets/images/create5.jpeg",
               name: "Consume",
               price: 1.53,
               desc:
-                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments"),
+                  "So happy to share my second collab with my dear\nfather @fcvkrender I'm so proud of his work and\naccomplishments",bids: Bidder.generateBidder(),history: Bidder.generateHistory()),
                   
                   
         ],);
